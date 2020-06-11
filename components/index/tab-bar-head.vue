@@ -7,20 +7,19 @@
 					<view class="swiper-tab-line"></view>
 				</view>
 			</block>
-
 		</scroll-view>
 	</view>
 </template>
 
 <script>
 	export default {
-		props: {
-			tabBars: Array,
-			tabIndex: Number
+		props:{
+			tabBars:Array,
+			tabIndex:Number
 		},
-		methods: {
+		methods:{
 			tabtap(index) {
-				this.$emit('tabtap', index);
+				this.$emit("tabtap",index);
 			}
 		}
 	}
@@ -35,7 +34,6 @@
 		font-weight: bold;
 		color: #969696
 	}
-
 	.uni-tab-bar .active {
 		color: #343434;
 	}

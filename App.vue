@@ -17,4 +17,5 @@
 	@import url("./common/uni.css");
 	@import url("./common/icon.css");
 	@import url("./common/common.css");
+	@import url("./common/animate.css");
 </style>

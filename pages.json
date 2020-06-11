@@ -1,87 +1,124 @@
 {
 	"tabBar": {
-	    "color": "#ADADAD",
-	    "selectedColor": "#FEE42A",
-	    "borderStyle": "black",
-	    "backgroundColor": "#ffffff",
-	    "list": [{
-	        "pagePath": "pages/index/index",
-	        "text": "糗事",
-			"iconPath":"static/index.png",
-			"selectedIconPath":"static/indexed.png"
-	    }, 
-		{
-	        "pagePath": "pages/news/news",	        
-	        "text": "动态",
-	        "iconPath":"static/news.png",
-	        "selectedIconPath":"static/newsed.png"
-	    },
-		{
-		    "pagePath": "pages/paper/paper",	        
-		    "text": "小纸条",
-		    "iconPath":"static/paper.png",
-		    "selectedIconPath":"static/papered.png"
-		},
-		{
-		    "pagePath": "pages/home/home",	        
-		    "text": "我的",
-		    "iconPath":"static/home.png",
-		    "selectedIconPath":"static/homeed.png"
-		}]
+		"color": "#ADADAD",
+		"selectedColor": "#FEE42A",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "糗事",
+				"iconPath": "static/index.png",
+				"selectedIconPath": "static/indexed.png"
+			},
+			{
+				"pagePath": "pages/news/news",
+				"text": "动态",
+				"iconPath": "static/news.png",
+				"selectedIconPath": "static/newsed.png"
+			},
+			{
+				"pagePath": "pages/paper/paper",
+				"text": "小纸条",
+				"iconPath": "static/paper.png",
+				"selectedIconPath": "static/papered.png"
+			},
+			{
+				"pagePath": "pages/home/home",
+				"text": "我的",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/homeed.png"
+			}
+		]
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarBackgroundColor":"#FFFFFF",
-				"app-plus":{
-					"scrollIndicator":"none",
-					"titleNView":{
-						"searchInput":{
-							"align":"center",
-							"backgroundColor":"#F7F7F7",
-							"borderRadius":"4px",
-							"placeholder":"搜索糗事",
-							"placeholderColor":"#CCCCCC",
-							"disabled":true
-							
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						"searchInput": {
+							"align": "center",
+							"backgroundColor": "#F7F7F7",
+							"borderRadius": "4px",
+							"placeholder": "搜索糗事",
+							"placeholderColor": "#CCCCCC",
+							"disabled": true
+
 						},
-					"buttons":[
+						"buttons": [
 							//左边
 							{
-								"color":"#FF9619",
-								"colorPressed":"#BBBBBB",
-								"float":"left",
-								"fontSize":"22px",
-								"fontSrc":"/static/font/icon.ttf",
-								"text":"\ue607"
+								"color": "#FF9619",
+								"colorPressed": "#BBBBBB",
+								"float": "left",
+								"fontSize": "22px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue607"
 							},
 							{
-								"color":"$FF9619",
-								"colorPressed":"#BBBBBB",
-								"float":"right",
-								"fontSize":"22px",
-								"fontSrc":"/static/font/icon.ttf",
-								"text":"\ue60c"
-								
+								"color": "$FF9619",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "22px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue60c"
+
 							}
 						]
 					}
-					
+
+				}
+			}
+		}, {
+			"path": "pages/news/news",
+			"style": {}
+		}, {
+			"path": "pages/paper/paper",
+			"style": {}
+		}, {
+			"path": "pages/home/home",
+			"style": {}
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						// "autoBackButton":false,
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#F7F7F7",
+							"borderRadius": "4px",
+							"placeholder": "搜索糗事",
+							"placeholderColor": "#CCCCCC",
+							"disabled": false
+
+						},
+						"buttons": [
+							{
+								"color": "$FF9619",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "15px",
+								"text": "取消"
+
+							}
+						]
+					}
+
 				}
 			}
 		}
 	    ,{
-            "path" : "pages/news/news",
-            "style" : {}
-        }   
-        ,{
-            "path" : "pages/paper/paper",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/home/home",
-            "style" : {}
+            "path" : "pages/add-input/add-input",
+            "style" : {
+				"app-plus":{
+					"titleNView":false
+				}
+			}
         }
     ],
 	"globalStyle": {

@@ -1,11 +1,11 @@
 <template>
-	<view class="index-list">
+	<view class="index-list animate__animated animate__bounceInRight">
 		<view class="index-list-1 u-f-acjb">
 			<view class="u-f-ac">
 				<image :src="item.userpic" mode="aspectFill" lazy-load></image>
 				{{item.username}}
 			</view>
-			<view class="u-f-ac" v-show="item.isguanzhu">
+			<view class="u-f-ac" v-show="!item.isguanzhu" @tap="guanzhu">
 				<view class="icon iconfont icon-21">关注</view>
 			</view>
 			
@@ -21,8 +21,8 @@
 		</view>
 		<view class="index-list-4 u-f-acjb">
 			<view class="u-fac" >
-				<view class="u-f-ac" :class="{'active':item.infonum.index ==1}"><view class="icon iconfont icon-xiaolian"></view>{{item.infonum.dingnum}}</view>
-				<view class="u-f-ac" :class="{'active':item.infonum.index ==2}"><view class="icon iconfont icon-kulian"></view>{{item.infonum.cainum}}</view>
+				<view class="u-f-ac" :class="{'active':item.infonum.index ==1}" @tap="caozuo('ding')"><view class="icon iconfont icon-xiaolian" ></view>{{item.infonum.dingnum}}</view>
+				<view class="u-f-ac" :class="{'active':item.infonum.index ==2}" @tap="caozuo('cai')"><view class="icon iconfont icon-kulian" ></view>{{item.infonum.cainum}}</view>
 			</view>
 			<view class="u-fac">
 				<view class="u-f-ac"><view class="icon iconfont icon-pinglun"></view>{{item.commentnum}}</view>
@@ -40,6 +40,41 @@
 				index:Number
 			},
 		},
+		methods:{
+			guanzhu(){
+				this.item.isguanzhu = true
+				uni.showToast({
+					title:"关注成功",
+					duration:1500
+				})
+			},
+			caozuo(type){
+				switch (type){
+					case "ding":
+						if (this.item.infonum.index == 1){
+							this.item.infonum.dingnum--;
+							this.item.infonum.index = 0;
+						};
+						this.item.infonum.dingnum++;
+						if (this.item.infonum.index == 2){
+							this.item.infonum.cainum--;
+						}
+						this.item.infonum.index = 1;
+						break;
+					case "cai":
+						if (this.item.infonum.index == 2){
+							this.item.infonum.cainum--;
+							this.item.infonum.index = 0;
+						};
+						if (this.item.infonum.index == 1){
+							this.item.infonum.dingnum--;
+						}
+						this.item.infonum.cainum++;
+						this.item.infonum.index = 2;
+						break;
+				}
+			}
+		}
 	}
 </script>
 
