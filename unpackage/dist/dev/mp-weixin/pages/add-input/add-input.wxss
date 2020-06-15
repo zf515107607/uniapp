@@ -1,0 +1,16 @@
+
+.uni-textarea{
+	border: 1rpx solid #EEEEEE;
+}
+.gonggao{
+	background: #FFFFFF;
+	padding: 50rpx;
+	border-radius: 10rpx;
+}
+.gonggao button {
+	background:#FFE934;
+}
+.gonggao image{
+	width: 80%;
+}
+

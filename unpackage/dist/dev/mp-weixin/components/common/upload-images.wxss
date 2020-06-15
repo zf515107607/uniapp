@@ -1,0 +1,25 @@
+
+.img{
+	position: relative;
+}
+.cell-pd {
+	padding: 22rpx 30rpx;
+}
+.list-pd {
+	margin-top: 50rpx;
+}
+.icon-shanchu{
+	z-index: 2;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background:#333333;
+	color: #FFFFFF;
+	padding: 2rpx 10rpx;
+	border-radius: 10rpx;
+}
+.uni-uploader__img{
+	position: absolute;
+	z-index: 1;
+}
+

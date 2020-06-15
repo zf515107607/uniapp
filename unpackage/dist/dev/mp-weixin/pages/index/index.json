@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "disableScroll": false,
+  "usingComponents": {
+    "index-list": "/components/index/index-list",
+    "tab-bar-head": "/components/index/tab-bar-head",
+    "load-more": "/components/common/load-more",
+    "no-thing": "/components/common/no-thing"
+  }
+}

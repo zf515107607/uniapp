@@ -33,14 +33,20 @@
 				duration:1000
 			})
 		},
-		
+		onBackPress(e) {
+			uni.showToast({
+				title:e['from'],
+				duration:3000
+			})
+			return true
+		},
 		methods: {
 			
-		},
-		mounted() {
-			let a = document.getElementsByClassName('uni-page-head-hd')[0]
-			a.style.display = 'none'
 		}
+		// mounted() {
+		// 	let a = document.getElementsByClassName('uni-page-head')[0]
+		// 	a.style.display = 'none'
+		// }
 		
 	}
 </script>
