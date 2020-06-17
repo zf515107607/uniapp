@@ -260,9 +260,11 @@
 				// this.newslist[index].loadtext = "加载中...";
 				// this.newslist[index].loadtext = "没有更多数据了";
 			},
+			// 点击切换
 			tabtap(index) {
 				this.tabIndex = index
 			},
+			// 滑动切换
 			tabChange(e) {
 				this.tabIndex = e.detail.current
 			}

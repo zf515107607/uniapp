@@ -6,7 +6,7 @@
 		"backgroundColor": "#ffffff",
 		"list": [{
 				"pagePath": "pages/index/index",
-				"text": "糗事",
+				"text": "资讯",
 				"iconPath": "static/index.png",
 				"selectedIconPath": "static/indexed.png"
 			},
@@ -58,8 +58,9 @@
 								"fontSrc": "/static/font/icon.ttf",
 								"text": "\ue607"
 							},
+							//右边
 							{
-								"color": "$FF9619",
+								"color": "#FF9619",
 								"colorPressed": "#BBBBBB",
 								"float": "right",
 								"fontSize": "22px",
@@ -81,7 +82,38 @@
 			}
 		}, {
 			"path": "pages/paper/paper",
-			"style": {}
+			"style": {
+				"enablePullDownRefresh":true, // 开启下拉刷新
+				"navigationBarTitleText":"小纸条",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"disableScroll":false,
+				"app-plus":{
+					"titleNView":{
+						"buttons":[
+							//左边
+							{
+								"color":"#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "left",
+								"fontSize": "40px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ueb46"
+							},
+							//右边
+							{
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "22px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue620"
+							}
+						]
+					}
+				}
+				
+				
+			}
 		}, {
 			"path": "pages/home/home",
 			"style": {}
@@ -92,7 +124,7 @@
 				"app-plus": {
 					"scrollIndicator": "none",
 					"titleNView": {
-						// "autoBackButton":false,
+						"autoBackButton":false,
 						"searchInput": {
 							"align": "left",
 							"backgroundColor": "#F7F7F7",
@@ -125,10 +157,68 @@
 				}
 			}
         }
+        ,{
+            "path" : "pages/topic-nav/topic-nav",
+            "style" : {
+				"navigationBarTitleText":"话题分类",
+				"app-plus":{
+					"bounce":"none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/topic-detail/topic-detail",
+            "style" : {
+				"enablePullDownRefresh":true, // 开启下拉刷新
+				"app-plus":{
+					"titleNView":{
+						"type":"transparent",
+						"buttons":[
+							{
+								"type":"menu"
+							}
+						]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/paper-friends-list/paper-friends-list",
+            "style": {
+            	"navigationBarBackgroundColor": "#FFFFFF",
+            	"app-plus": {
+					"animationType":"slide-in-left",
+            		"scrollIndicator": "none",
+            		"titleNView": {
+            			"autoBackButton":false,
+            			"searchInput": {
+            				"align": "left",
+            				"backgroundColor": "#F7F7F7",
+            				"borderRadius": "4px",
+            				"placeholder": "搜索糗事",
+            				"placeholderColor": "#CCCCCC",
+            				"disabled": false
+            
+            			},
+            			"buttons": [
+            				{
+            					"color": "$FF9619",
+            					"colorPressed": "#BBBBBB",
+            					"float": "right",
+            					"fontSize": "15px",
+            					"text": "取消"
+            
+            				}
+            			]
+            		}
+            
+            	}
+            }
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "仿糗事百科",
+		"navigationBarTitleText": "资讯",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}
