@@ -6,12 +6,14 @@
 				<swiper-item v-for="(items,index) in newslist" :key="index">
 					<scroll-view scroll-y="true" class="list" @scrolltolower="loadmore(index)">
 						<template v-if="items.list.length >0">
+						<!-- 图文列表 -->
 							<block v-for="(item,index1) in items.list" :key="index1">
 								<index-list :item="item" :index="index"></index-list>
 							</block>
-							
+							<!-- 上拉加载 -->
 							<load-more :loadtext="items.loadtext"></load-more>
 						</template>
+						<!-- 没有图文列表时显示信息 -->
 						<template v-else>
 							<no-thing></no-thing>
 						</template>
